@@ -12,7 +12,7 @@ public class PaymentTermService {
 	JdbcTemplate jdbcTemplate;
 public String createOrUpdatePaymentTerm(PaymentTermInWrapper paymentTermInWrapper) {
 	
-	String sql="INSERT INTO payment_term(id,code,payment_termcol,creationdate,days,reminderbeforedays) values('abc','bcd',now(),10,4)";
+	String sql="INSERT INTO payment_term(id,code,payment_termcol,creationdate,days,reminderbeforedays) values(1,'abc','bcd',LocalDate(),10,4)";
 			
 	jdbcTemplate.execute(sql);
 	return null;
